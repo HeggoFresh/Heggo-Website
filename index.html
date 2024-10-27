@@ -13,8 +13,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
-            color: #333;
+            background-color: #121212;
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -23,18 +23,18 @@
 
         header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         header h1 {
             font-size: 3rem;
-            color: #111;
+            color: #ff5500;
             margin-bottom: 10px;
         }
 
         header p {
             font-size: 1.2rem;
-            color: #666;
+            color: #cccccc;
         }
 
         .profile-image {
@@ -46,8 +46,7 @@
             background-size: cover;
             background-position: center;
             margin: 20px auto;
-        }
-
+            border: 3px solid #ff5500;
         }
 
         .music-list {
@@ -57,47 +56,65 @@
         }
 
         .music-item {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .music-item:last-child {
-            border-bottom: none;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: #1e1e1e;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .music-item h3 {
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 8px;
+            font-size: 1.5rem;
+            color: #ff5500;
+            margin-bottom: 10px;
         }
 
-        .audio-player {
-            width: 100%;
-            outline: none;
+        .music-item iframe {
+            border-radius: 5px;
+        }
+
+        .music-item .credits {
+            font-size: 0.8rem;
+            color: #cccccc;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .credits a {
+            color: #ff5500;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="profile-image"></div> <!-- Bild wird hier angezeigt -->
+        <div class="profile-image"></div>
         <h1>Heggo</h1>
         <p>Willkommen auf meiner offiziellen Musikseite! Hier findest du meine neuesten Songs und Werke.</p>
     </header>
 
     <section class="music-list">
         <div class="music-item">
-            <h3>Drugs(Single)</h3>
+            <h3>Drugs (Single)</h3>
             <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1123821229&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-                
-                </iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-140871898" title="Heggo" target="_blank" style="color: #cccccc; text-decoration: none;">Heggo</a> · <a href="https://soundcloud.com/user-140871898/drugs" title="Drugs" target="_blank" style="color: #cccccc; text-decoration: none;">Drugs</a>
+            </iframe>
+            <div class="credits">
+                <a href="https://soundcloud.com/user-140871898" title="Heggo" target="_blank">Heggo</a> · 
+                <a href="https://soundcloud.com/user-140871898/drugs" title="Drugs" target="_blank">Drugs</a>
             </div>
+        </div>
+
         <div class="music-item">
             <h3>Sucht EP</h3>
-            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1290696505&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-140871898" title="Heggo" target="_blank" style="color: #cccccc; text-decoration: none;">Heggo</a> · <a href="https://soundcloud.com/user-140871898/sets/suchtep" title="SuchtEP" target="_blank" style="color: #cccccc; text-decoration: none;">SuchtEP</a></div>
-        <div class="music-item">
-        <!-- Weitere Songs hinzufügen -->
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" 
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1290696505&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+            <div class="credits">
+                <a href="https://soundcloud.com/user-140871898" title="Heggo" target="_blank">Heggo</a> · 
+                <a href="https://soundcloud.com/user-140871898/sets/suchtep" title="Sucht EP" target="_blank">Sucht EP</a>
+            </div>
+        </div>
     </section>
 </body>
 </html>
