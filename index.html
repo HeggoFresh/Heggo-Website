@@ -23,7 +23,7 @@
 
         header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px; /* Mehr Abstand */
         }
 
         header h1 {
@@ -52,7 +52,7 @@
         .music-list {
             width: 100%;
             max-width: 1000px;
-            margin-top: 20px;
+            margin-top: 40px; /* Abstand von der Profil-Section */
         }
 
         .music-row {
@@ -60,7 +60,7 @@
             gap: 20px;
             margin-bottom: 20px;
             justify-content: center;
-            flex-wrap: wrap; /* Macht die Zeile flexibler für kleinere Bildschirme */
+            flex-wrap: wrap; /* Flexibler für kleinere Bildschirme */
         }
 
         .music-item {
@@ -70,7 +70,13 @@
             border-radius: 10px;
             background-color: #1e1e1e;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px; /* Fügt Abstand zwischen gestapelten Singles auf kleinen Bildschirmen hinzu */
+            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .music-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
         }
 
         .music-item h3 {
@@ -121,12 +127,25 @@
             }
 
             .music-item {
-                max-width: 90%; /* Macht die Singles schmaler auf kleinen Bildschirmen */
+                max-width: 90%; /* Singles schmaler auf kleinen Bildschirmen */
             }
 
             .ep-item {
                 max-width: 90%; /* EP breiter auf kleinen Bildschirmen */
             }
+
+            .music-item h3 {
+                font-size: 1.3rem;
+            }
+
+            .credits {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Sanftes Scrollen für eine bessere Nutzererfahrung */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -145,7 +164,7 @@
                 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1123821229&color=%232c2c2c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                 </iframe>
-                
+               
             </div>
 
             <div class="music-item">
