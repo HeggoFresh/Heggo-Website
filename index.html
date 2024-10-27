@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heggo Musik</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ccc;
+            background-image: url('Heggo.jpg'); /* Hier dein Bild eingefügt */
+            background-size: cover;
+            background-position: center;
+            margin: 20px auto;
+        }
+
+        .music-list {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        .music-item {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .music-item:last-child {
+            border-bottom: none;
+        }
+
+        .music-item h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .audio-player {
+            width: 100%;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-image"></div> <!-- Bild wird hier angezeigt -->
+        <h1>Heggo</h1>
+        <p>Willkommen auf meiner offiziellen Musikseite! Hier findest du meine neuesten Songs und Werke.</p>
+    </header>
+
+    <section class="music-list">
+        <div class="music-item">
+            <h3>Drugs</h3>
+            <audio class="audio-player" controls>
+                <source src="Drugs.wav" type="audio/wav">
+                Dein Browser unterstützt dieses Audio-Format nicht.
+            </audio>
+        </div>
+        <div class="music-item">
+            <h3>Songtitel 2</h3>
+            <audio class="audio-player" controls>
+                <source src="song2.mp3" type="audio/mp3">
+                Dein Browser unterstützt dieses Audio-Format nicht.
+            </audio>
+        </div>
+        <div class="music-item">
+            <h3>Songtitel 3</h3>
+            <audio class="audio-player" controls>
+                <source src="song3.mp3" type="audio/mp3">
+                Dein Browser unterstützt dieses Audio-Format nicht.
+            </audio>
+        </div>
+        <!-- Weitere Songs hinzufügen -->
+    </section>
+</body>
+</html>
+
+
