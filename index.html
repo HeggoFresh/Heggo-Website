@@ -59,10 +59,12 @@
             display: flex;
             gap: 20px;
             margin-bottom: 20px;
+            justify-content: center; /* Zentriert die Singles */
         }
 
         .music-item {
             flex: 1;
+            max-width: 300px; /* Beschränkt die Breite jedes Singles */
             padding: 20px;
             border-radius: 10px;
             background-color: #1e1e1e;
@@ -92,15 +94,14 @@
         }
 
         .ep-item {
-            max-width: 600px; /* Schmalere Breite für die EP */
-            margin: 0 auto 20px; /* Zentrieren und Abstand nach unten */
+            max-width: 70%; /* Etwas breitere Breite für die EP */
+            margin: 0 auto 20px; /* Zentriert die EP und fügt unten Abstand hinzu */
             padding: 20px;
             border-radius: 10px;
             background-color: #1e1e1e;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
-
     </style>
 </head>
 <body>
@@ -116,8 +117,9 @@
             <div class="music-item">
                 <h3>Drugs (Single)</h3>
                 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1123821229&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1123821229&color=%232c2c2c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                 </iframe>
+            
             </div>
 
             <div class="music-item">
@@ -135,7 +137,7 @@
             </div>
         </div>
 
-        <!-- Zentrierte und schmalere EP darunter -->
+        <!-- Zentrierte und breitere EP darunter -->
         <div class="ep-item">
             <h3>Sucht EP</h3>
             <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" 
@@ -145,7 +147,3 @@
     </section>
 </body>
 </html>
-
-
-
-
