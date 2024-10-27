@@ -59,16 +59,18 @@
             display: flex;
             gap: 20px;
             margin-bottom: 20px;
-            justify-content: center; /* Zentriert die Singles */
+            justify-content: center;
+            flex-wrap: wrap; /* Macht die Zeile flexibler für kleinere Bildschirme */
         }
 
         .music-item {
             flex: 1;
-            max-width: 300px; /* Beschränkt die Breite jedes Singles */
+            max-width: 300px;
             padding: 20px;
             border-radius: 10px;
             background-color: #1e1e1e;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px; /* Fügt Abstand zwischen gestapelten Singles auf kleinen Bildschirmen hinzu */
         }
 
         .music-item h3 {
@@ -94,13 +96,37 @@
         }
 
         .ep-item {
-            max-width: 70%; /* Etwas breitere Breite für die EP */
-            margin: 0 auto 20px; /* Zentriert die EP und fügt unten Abstand hinzu */
+            max-width: 70%;
+            margin: 0 auto 20px;
             padding: 20px;
             border-radius: 10px;
             background-color: #1e1e1e;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
+        }
+
+        /* Responsive-Anpassungen für kleinere Bildschirme */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .music-row {
+                flex-direction: column; /* Stapelt die Singles auf kleinen Bildschirmen */
+                align-items: center; /* Zentriert die gestapelten Singles */
+            }
+
+            .music-item {
+                max-width: 90%; /* Macht die Singles schmaler auf kleinen Bildschirmen */
+            }
+
+            .ep-item {
+                max-width: 90%; /* EP breiter auf kleinen Bildschirmen */
+            }
         }
     </style>
 </head>
@@ -119,7 +145,10 @@
                 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1123821229&color=%232c2c2c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                 </iframe>
-            
+                <div class="credits">
+                    <a href="https://soundcloud.com/user-140871898" title="Heggo" target="_blank">Heggo</a> · 
+                    <a href="https://soundcloud.com/user-140871898/drugs" title="Drugs" target="_blank">Drugs</a>
+                </div>
             </div>
 
             <div class="music-item">
